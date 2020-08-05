@@ -9,7 +9,7 @@ The directory structure of backend is as follows:
 ./
 └── server
     ├── apps
-    │   ├── auth
+    │   ├── app1
     │   │   ├── admin.py
     │   │   ├── api
     │   │   │   ├── routing.py
@@ -22,7 +22,7 @@ The directory structure of backend is as follows:
     │   │   │   └── __init__.py
     │   │   ├── models.py
     │   │   └── tests.py
-    │   └── notif
+    │   └── app2
     │       ├── admin.py
     │       ├── api
     │       │   ├── routing.py
