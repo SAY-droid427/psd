@@ -1,0 +1,26 @@
+.DS_store
+**/node_modules
+**/dist
+
+# log files
+**npm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+
+# dB
+**db.sqlite3
+
+# __pycache__
+**/__pycache__
+
+# local-settings
+**/local_settings.py
+
+# env files
+**/*env/
+
+# static and media files
+**/static
+**/media
