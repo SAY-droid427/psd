@@ -6,7 +6,9 @@ The client side code is in the frontend folder while the server side code is in 
 The directory structure of backend is as follows:
 
 ```bash
-./
+backend/
+├── README.md
+├── requirements.txt
 └── server
     ├── apps
     │   ├── app1
@@ -42,32 +44,34 @@ The directory structure of backend is as follows:
         ├── settings.py
         ├── urls.py
         └── wsgi.py
-
 ```
 
+The directory structure of frontend is as follows:
 
-# frontend
-
-## Project setup
+```bash
+frontend/
+├── babel.config.js
+├── package.json
+├── package-lock.json
+├── public
+│   ├── favicon.ico
+│   └── index.html
+├── src
+│   ├── App.vue
+│   ├── assets
+│   │   ├── logo.png
+│   │   └── logo.svg
+│   ├── components
+│   │   └── HelloWorld.vue
+│   ├── main.js
+│   ├── plugins
+│   │   └── vuetify.js
+│   ├── router
+│   │   └── index.js
+│   ├── store
+│   │   └── index.js
+│   └── views
+│       ├── About.vue
+│       └── Home.vue
+└── vue.config.js
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
