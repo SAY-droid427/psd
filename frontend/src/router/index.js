@@ -1,8 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 import Home from '../views/Home.vue'
 
+import AdminDashboard from '../views/AdminDashboard'
+
+
+import admin_routes from './admin_routes' 
+
 Vue.use(VueRouter)
+
+
 
   const routes = [
   {
@@ -19,15 +27,17 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/dashboards',
-    name: 'Dashboards',
-    component:()=> import(/*webpackChunkName: "dashboard" */'../views/Dashboards.vue')
-  }
+    path: '/psadmin',
+    children : admin_routes,
+    component : AdminDashboard
+  },
+
+ 
 ]
 
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: process.env.BASE_URL || '/',
   routes
 })
 
