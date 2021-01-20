@@ -1,5 +1,5 @@
 import ServicesList from "../components/Admin/ServicesList";
-import Users from "../components/Admin/User/Users.vue";
+// import Users from "../components/Admin/User/Users.vue";
 
 const admin_routes = [
 	{
@@ -11,14 +11,14 @@ const admin_routes = [
 		},
 	},
 
-	{
-		path: "users",
-		name: "Admin.Users",
-		component: Users,
-		meta: {
-			title: "PS Admin | User List",
-		},
-	},
+	// {
+	// 	path: "users",
+	// 	name: "Admin.Users",
+	// 	component: Users,
+	// 	meta: {
+	// 		title: "PS Admin | User List",
+	// 	},
+	// },
 
 	{
 		path: "groups",
