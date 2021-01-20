@@ -12,6 +12,7 @@ import PsDivison from "../views/PsDivison.vue";
 
 import admin_routes from "./admin_routes";
 import StudentRouter from "./StudentRouter";
+import SupervisorRouter from "./SupervisorRouter";
 
 Vue.use(VueRouter);
 
@@ -45,6 +46,7 @@ const routes = [
 	{
 		path: "/supervisor",
 		component: Supervisor,
+		children: SupervisorRouter,
 	},
 	{
 		path: "/hod",

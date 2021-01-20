@@ -1,6 +1,15 @@
 <template>
-  <div>Supervisor</div>
+  <v-container>
+      <router-view />
+    </v-container>
 </template>
+
 <script>
-export default {};
+export default {
+
+}
 </script>
+
+<style>
+
+</style>
