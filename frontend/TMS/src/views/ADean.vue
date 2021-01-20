@@ -1,5 +1,5 @@
 <template>
-  <div>About</div>
+  <div>Associate Dean</div>
 </template>
 <script>
 export default {};

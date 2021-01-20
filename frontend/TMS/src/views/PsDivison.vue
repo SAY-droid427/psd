@@ -1,5 +1,5 @@
 <template>
-  <div>About</div>
+  <div>Ps Division</div>
 </template>
 <script>
 export default {};

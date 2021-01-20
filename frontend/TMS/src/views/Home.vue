@@ -1,8 +1,12 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
- 
-  </div>
+    <div class="home">
+        <img alt="Vue logo" src="../assets/logo.png"><br />
+        <a href="/student">Student</a><br />
+        <a href="/supervisor">supervisor</a><br />
+        <a href="/hod">hod</a><br />
+        <a href="/psd">psd</a><br />
+        <a href="/asDean">Associate Dean</a><br />
+    </div>
 </template>
 
 <script>
@@ -10,9 +14,9 @@
 
 
 export default {
-  name: 'Home',
-  components: {
-   
-  }
+    name: 'Home',
+    components: {
+
+    }
 }
 </script>
