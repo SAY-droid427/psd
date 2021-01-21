@@ -13,6 +13,8 @@ import PsDivison from "../views/PsDivison.vue";
 import admin_routes from "./admin_routes";
 import StudentRouter from "./StudentRouter";
 import SupervisorRouter from "./SupervisorRouter";
+import HodRouter from "./HodRouter";
+import PSDivRouter from "./PSDivRouter";
 
 Vue.use(VueRouter);
 
@@ -51,10 +53,12 @@ const routes = [
 	{
 		path: "/hod",
 		component: Hod,
+		children: HodRouter,
 	},
 	{
 		path: "/psd",
 		component: PsDivison,
+		children: PSDivRouter
 	},
 	{
 		path: "/asDean",

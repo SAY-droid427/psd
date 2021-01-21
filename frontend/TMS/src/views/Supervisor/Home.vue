@@ -1,5 +1,8 @@
 <template>
-    <Request title="PS to TS transfer" v-bind:items="items" />
+   <div class="container">
+     <h1 class="my-5">PS To TS Transfers</h1>
+    <Request v-bind:items="items" />
+   </div>
 </template>
 
 <script>

@@ -1,9 +1,7 @@
 <template>
-    <div class="container">
-        <h1 class="my-5">{{title}}</h1>
-        <div class="row mx-0 justify-center">
-            <div class="col-md-6">
-                <v-tabs v-model="tab" background-color="indigo" centered dark>
+    <div>
+        <div class="justify-center">
+                <v-tabs v-model="tab" fixed-tabs background-color="indigo"  dark>
                     <v-tabs-slider color="White"></v-tabs-slider>
     
                     <v-tab v-for="item in items" :key="item">
@@ -42,12 +40,11 @@
                 </v-tabs-items>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
 export default {
-    props : ['title', 'items'],
+    props : ['items'],
     data() {
         return {
             tab: null,
@@ -59,7 +56,7 @@ export default {
 <style scoped>
 .container {
     text-align: center;
-    padding-top: 140px;
+    padding:0px !important;
 }
 
 .text-red {
