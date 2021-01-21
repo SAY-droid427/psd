@@ -1,6 +1,11 @@
 <template>
-  <div>Hod</div>
+  <v-container>
+      <router-view />
+    </v-container>
 </template>
 <script>
 export default {};
 </script>
+
+<style scoped>
+</style>
