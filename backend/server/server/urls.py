@@ -21,5 +21,5 @@ from apps import accounts,tms
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('apps.accounts.api.urls')),
-    # path('tms/', include('apps.tms.urls')),
+    path('tms/', include('apps.tms.urls')),
 ]
