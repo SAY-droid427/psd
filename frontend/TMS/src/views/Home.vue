@@ -1,6 +1,7 @@
 <template>
     <div class="home">
-        <img alt="Vue logo" src="../assets/logo.png"><br />
+            <LoginCard/>
+        
         <a href="/student">Student</a><br />
         <a href="/supervisor">supervisor</a><br />
         <a href="/hod">hod</a><br />
@@ -12,11 +13,12 @@
 <script>
 // @ is an alias to /src
 
+import LoginCard from '../components/LoginCard'
 
 export default {
     name: 'Home',
     components: {
-
+        LoginCard
     }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
     <v-card>
       <v-app-bar
-      absolute
+
       color="grey lighten-4"
       dark
       class="px-0 mx-0"
