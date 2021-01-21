@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <Deadlines />
         <h1 class="my-5">Transfer Management System</h1>
         <div class="row mx-0 justify-center">
             <PS2TS />
@@ -23,12 +24,14 @@
 </template>
 
 <script>
-import PS2TS from '../../components/PS2TS'
-import TS2PS from '../../components/TS2PS'
+import PS2TS from '../../components/PS2TS';
+import TS2PS from '../../components/TS2PS';
+import Deadlines from "../../components/Deadlines";
 export default {
     components: {
         PS2TS,
-        TS2PS
+        TS2PS,
+        Deadlines
     },
 
     data: () => ({
@@ -40,7 +43,7 @@ export default {
 <style scoped>
 .container {
     text-align: center;
-    padding-top: 140px;
+    padding-top: 60px;
 }
 
 .text-red {
