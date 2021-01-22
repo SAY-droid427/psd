@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
 
 from apps import accounts,tms
 
@@ -23,3 +24,8 @@ urlpatterns = [
     path('accounts/', include('apps.accounts.api.urls')),
     path('tms/', include('apps.tms.urls')),
 ]
+
+if settings.DEBUG:
+    urlpatterns += [
+        path('api-auth/', include('rest_framework.urls')),
+    ]

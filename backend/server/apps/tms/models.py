@@ -32,7 +32,7 @@ class ActiveUserProfile(models.Model):        #model used for filling the databa
     cgpa = models.CharField(max_length=6, default="NA")
 
     is_active_tms = models.BooleanField(default=False)
-    
+
 
     def __str__(self):
         return str(self.email+str(self.user_type))
