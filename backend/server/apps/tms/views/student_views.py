@@ -36,7 +36,7 @@ class TS2PS(APIView):
                 data = {
                     'error': True,
                     'message': 'Access Denied. User not present in active user list',
-                    'values': {},
+                    'data': {},
                 },
                 status = status.HTTP_403_FORBIDDEN
             )
@@ -48,7 +48,7 @@ class TS2PS(APIView):
                 data = {
                     'error': False,
                     'message': 'TS2PS form saved successfully',
-                    'values': {},
+                    'data': {},
                 },
                 status = status.HTTP_201_CREATED
             )
