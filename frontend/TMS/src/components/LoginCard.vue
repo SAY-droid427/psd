@@ -42,22 +42,17 @@ export default {
     },
     methods : {
 
-        signIn(){
-                
+        async signIn(){
             this.loading = true;
-            let ref = this; 
-            this.$gAuth.signIn().then((googleUser)=>{
-                let userProfile = googleUser.getBasicProfile();
-                ref.$store.commit('signIn',userProfile,'Google OAuth2');
-          }).catch(e=>{
-              if(e!==false)
-              ref.error=true;
-              ref.errorMsg = e;
-          }).finally(()=>{
-              this.loading = false;
-          });
-        
-          
+            await this.$store.dispatch('GAUTH_REQUEST').then(res=> {
+                console.log('login success'+res);
+                // can redirect here too
+            }).catch(err=>{
+                console.log('login error'+err);
+            })
+            .finally(()=>{
+                this.loading = false;
+            })
 
         }
     }
