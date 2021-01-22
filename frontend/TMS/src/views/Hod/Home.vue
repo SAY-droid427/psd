@@ -1,7 +1,7 @@
 <template>
 <div class="container">
      <h1 class="my-5">Transfer Management</h1>
-      <v-tabs fixed-tabs background-color="indigo" dark >
+      <v-tabs fixed-tabs background-color="blue" dark >
     <v-tab v-for="type in types" v-bind:key="type.id">
         {{type.transfer}}        
     </v-tab>      

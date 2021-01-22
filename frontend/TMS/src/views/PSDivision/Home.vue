@@ -6,10 +6,10 @@
              <v-card  class="mx-auto" max-width="900" outlined>
                <v-row align="center" justify="space-around">
                  <v-col cols="6">
-                  <v-btn depressed color="primary">Populate database</v-btn>   
+                  <v-btn  color="black" dark class="ml-auto">Populate database</v-btn>   
                 </v-col>
                 <v-col cols="6">
-                  <v-btn depressed color="primary">Download Transfers</v-btn>   
+                 <router-link to="/psd/transfer" class="link"> <v-btn  color="black" dark class="mr-auto">Download Transfers</v-btn></router-link>   
                 </v-col>
                </v-row>
                <v-divider></v-divider>
@@ -24,11 +24,18 @@
                        <h3 class="my-5">{{form.title}}</h3>
                      </v-col>
                      <v-col cols=6 >
-                         <v-switch label="on" v-model="form.status"></v-switch>
+                         <v-switch label="Enable" v-model="form.status" color="black"></v-switch>
                      </v-col>
                    </v-row>
                    <v-container v-if="form.status">
-                   <DatePicker v-bind:title="form.title"/>
+                     <v-row>
+                       <v-col cols="6">
+                         <strong>{{form.title}} Deadline</strong>
+                       </v-col>
+                       <v-col cols="6">
+                          <DatePicker />
+                       </v-col>
+                     </v-row>
                    </v-container>
                  </v-row>
                 <v-form>
@@ -36,10 +43,15 @@
                     <v-row>
                           <v-col cols="6"><strong>Message To Be Displayed</strong></v-col>
                       <v-col cols="6">
-                        <v-text-field height="150"  placeholder="" outlined ></v-text-field>  
+                        <v-text-field height="150"  placeholder="" outlined v-model="msg" ></v-text-field>  
                       </v-col>     
                     </v-row>
                  </v-container>
+                 <v-row align="center" justify="space-around">
+                   <v-col cols=12>
+                     <v-btn color="black" large dark>Update</v-btn>
+                   </v-col>
+                 </v-row>
               </v-form>
             </v-card-text>
             </v-card>
@@ -69,10 +81,13 @@ export default {
                title:"Enable TS to PS form",
                status:false
            }
-       ],  
+       ],
+       msg:""  
      
       }
+    
     },
+   
     
 }
 </script>
@@ -97,6 +112,9 @@ export default {
 
 .detail {
     margin-top: 10rem;
+}
+.link{
+  text-decoration: none;
 }
 
 

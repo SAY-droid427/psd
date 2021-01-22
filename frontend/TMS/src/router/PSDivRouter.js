@@ -1,4 +1,5 @@
 import Home from "../views/PSDivision/Home.vue";
+import DownloadTransfer from "../views/PSDivision/DownloadTransfer.vue";
 
 const StudentRouter = [
 	{
@@ -8,13 +9,13 @@ const StudentRouter = [
 			title: "PS Admin | Services",
 		},
 	},
-	// {
-	// 	path: "status",
-	// 	component: Status,
-	// 	meta: {
-	// 		title: "PS Admin | Services",
-	// 	},
-	// },
+	{
+		path: "transfer",
+		component: DownloadTransfer,
+		meta: {
+			title: "PS Admin | Services",
+		},
+	},
 ];
 
 export default StudentRouter;

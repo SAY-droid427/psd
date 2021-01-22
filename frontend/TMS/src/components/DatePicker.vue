@@ -1,9 +1,5 @@
 <template>
   <v-row>
-      <v-col cols=6>
-         <strong> {{title}} Deadlines</strong>
-      </v-col>
-      <v-col cols="6">
             <v-menu
         ref="menu"
         v-model="menu"
@@ -11,43 +7,40 @@
         :return-value.sync="date"
         transition="scale-transition"
         offset-y 
-        min-width="auto"
+        min-width="auto" 
       >
-        <template v-slot:activator="{ on, attrs }">
+        <template v-slot:activator="{ on, attrs }" >
           <v-text-field
             v-model="date"
-            label="Select Deadline"
+            label="Select Date"
             prepend-icon="mdi-calendar"
             readonly
             v-bind="attrs"
-            v-on="on"
+            v-on="on" 
           ></v-text-field>
         </template>
         <v-date-picker
           v-model="date"
           no-title
-          scrollable
+          scrollable 
         >
           <v-spacer></v-spacer>
           <v-btn
             text
-            color="primary"
+            color="indigo"
             @click="menu = false"
           >
             Cancel
           </v-btn>
           <v-btn
             text
-            color="primary"
+            color="indigo"
             @click="$refs.menu.save(date)"
           >
             SAVE
           </v-btn>
         </v-date-picker>
       </v-menu>
-
-    </v-col>
-    <v-spacer></v-spacer>
   </v-row>
 </template>
 
@@ -62,3 +55,4 @@
     props:['title']
   }
 </script>
+

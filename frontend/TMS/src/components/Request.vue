@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="justify-center">
-                <v-tabs v-model="tab" fixed-tabs background-color="indigo"  dark>
-                    <v-tabs-slider color="White"></v-tabs-slider>
+                <v-tabs v-model="tab" fixed-tabs background-color="indigo" dark slider-size=3>
+                    <v-tabs-slider color="white"></v-tabs-slider>
     
                     <v-tab v-for="item in items" :key="item">
                         {{ item.name }}
