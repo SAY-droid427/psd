@@ -22,39 +22,39 @@
                      <v-col cols="8">
                       <v-radio-group v-model="radioGroup">
                           <v-radio
-                            label="PS To TS"
-                            value="" color="indigo"
+                            label="PS To TS" 
+                             color="indigo"  v-on:click="clicked1"
                           ></v-radio>
                           <v-col cols="6"> 
-                         <v-list>
+                         <v-list v-if="toggle1">
                          <v-col cols="12">
-                             <v-checkbox v-model="type1" label="PS-PS to PS-TS(Dual Degree)" color="indigo"></v-checkbox>                        
+                             <v-checkbox v-model="type11" label="PS-PS to PS-TS(Dual Degree)" color="indigo"></v-checkbox>                        
                           </v-col>
                           <v-col cols="12">
-                             <v-checkbox v-model="type1" label="PS-PS to PS-TS(Dual Degree)" color="indigo"></v-checkbox>                        
+                             <v-checkbox v-model="type12" label="PS-PS to PS-TS(Dual Degree)" color="indigo"></v-checkbox>                        
                           </v-col>
                           <v-col cols="12">
-                             <v-checkbox v-model="type1" label="PS-PS to TS-PS(Dual Degree)" color="indigo"></v-checkbox>                        
+                             <v-checkbox v-model="type13" label="PS-PS to TS-PS(Dual Degree)" color="indigo"></v-checkbox>                        
                           </v-col>
                           <v-col cols="12">
-                             <v-checkbox v-model="type1" label="TS-PS to TS-TS(Dual Degree)" color="indigo"></v-checkbox>                        
+                             <v-checkbox v-model="type14" label="TS-PS to TS-TS(Dual Degree)" color="indigo"></v-checkbox>                        
                           </v-col>
                          </v-list>
                      </v-col>
                            <v-radio
-                            label="TS To PS"
-                            value=""  color="indigo"
+                            label="TS To PS"  v-on:click="clicked2"
+                            color="indigo" 
                           ></v-radio>
                            <v-col cols="6"> 
-                         <v-list>
+                         <v-list v-if="toggle2">
                          <v-col cols="12">
-                             <v-checkbox v-model="type1" label="TS to PS(Single Degree)" color="indigo"></v-checkbox>                        
+                             <v-checkbox v-model="type21" label="TS to PS(Single Degree)" color="indigo"></v-checkbox>                        
                           </v-col>
                           <v-col cols="12">
-                             <v-checkbox v-model="type1" label="PS-TS to PS-PS(Dual Degree)" color="indigo"></v-checkbox>                        
+                             <v-checkbox v-model="type22" label="PS-TS to PS-PS(Dual Degree)" color="indigo"></v-checkbox>                        
                           </v-col>
                           <v-col cols="12">
-                             <v-checkbox v-model="type1" label="TS-TS to TS-PS(Dual Degree)" color="indigo"></v-checkbox>                        
+                             <v-checkbox v-model="type23" label="TS-TS to TS-PS(Dual Degree)" color="indigo"></v-checkbox>                        
                           </v-col>
                          </v-list>
                      </v-col>
@@ -81,27 +81,37 @@ export default {
     },
     data () {
       return {
-          m1:false,
-          m2:false,
-          types:[
-
-              {
-                  id:3,
-                  name:"PS-PS to TS-PS",
-                  status:false
-              },
-              {
-                  id:4,
-                  name:"PS-TS to TS-TS",
-                  status:false
-              },
-              {
-                  id:5,
-                  name:"PS-TS to PS-PS"
-              }
-          ]
+          radioGroup: 1,
+          type11:0,
+          type12:0,
+          type13:0,
+          type14:0,
+          type21:0,
+          type22:0,
+          type23:0,
+          toggle1:0,
+          toggle2:0
+       
       }
+    },
+    methods:{
+        clicked1(){        
+            this.toggle1=!this.toggle1;
+            if(this.toggle1)
+            this.toggle2=0;
+
+
+        },
+        clicked2(){
+            this.toggle2=!this.toggle2;
+            if(this.toggle2)
+            this.toggle1=0;
+
+        }
+ 
+
     }
+
 }
 </script>
 
